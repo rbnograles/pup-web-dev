@@ -1,0 +1,149 @@
+* {
+    /* basic css clean */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* set body behavior */
+body {
+    scroll-behavior: smooth;
+    font-family: Cinzel, Arial, Helvetica, sans-serif; /* setting fallback font styles */
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+/* text element default behaviors */
+h2 {
+    margin: 10px 0;
+}
+p {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* nav alignment and design */
+header {
+    background-color: maroon;
+    height: 70px;
+    padding: 0 2%;
+    display: flex;
+    transition: all .15s ease-in;
+}
+img {
+    margin: auto 0;
+    height: 50px;
+}
+.nav-title-align {
+    margin: auto 10px;
+    margin-top: 10px;
+}
+.nav-title-align p {
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+}
+.nav-title-align span {
+    color: white;
+    font-size: 12px;
+}
+.nav-title-align span span {
+    font-size: 13px;
+}
+
+/* content design */
+.container-center {
+    width: 85%;
+    margin: 2% auto;
+    padding: 10px;
+    text-align: center;
+}
+.container-center h2 {
+    font-size: 18px;
+    color: maroon;
+}
+marquee {
+    height: 20em;
+    width: 100%;
+
+    padding: 2%;
+    background-color: #f1f3f4;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    overflow: scroll;
+}
+audio {
+    width: 100%;
+    height: 50px;
+}
+audio:focus {
+    outline: none !important;
+}
+
+/* footer and bottom component styles */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 5%;
+    text-align: center;
+    font-size: 10px;
+}
+/* this will handle all responsive stuffs for mobile and tablet */
+@media only screen and (min-width: 668px) {
+    header {
+        padding: .5% 2%;
+    }
+    img {
+        height: 55px;
+    }
+    .nav-title-align {
+        line-height: 15px;
+    }
+    .nav-title-align p {
+        font-size: 16px;
+    }
+    .nav-title-align span {
+        font-size: 14px;
+    }
+    .nav-title-align span span {
+        font-size: 15px;
+    }
+    .container-center{
+        width: 80%;
+    }
+    .container-center h2 {
+        font-size: 22px;
+    }
+    footer {
+        padding: 2%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .nav-title-align p {
+        font-size: 20px;
+    }
+    .nav-title-align span {
+        font-size: 16px;
+    }
+    .nav-title-align span span {
+        font-size: 18px;
+    }
+    .container-center{
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .container-center{
+        width: 50%;
+    }
+    footer {
+        padding: 1.5%;
+        font-size: 14px;
+    }
+}
