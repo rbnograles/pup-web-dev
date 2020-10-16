@@ -8,8 +8,6 @@
 body {
     scroll-behavior: smooth;
     font-family: Cinzel, Arial, Helvetica, sans-serif; /* setting fallback font styles */
-    width: 100vw;
-    height: 100vh;
     position: relative;
 }
 
@@ -25,7 +23,7 @@ p {
 /* nav alignment and design */
 header {
     background-color: maroon;
-    height: 70px;
+    height: 75px;
     padding: 0 2%;
     display: flex;
     transition: all .15s ease-in;
@@ -42,6 +40,7 @@ img {
     color: white;
     font-size: 13px;
     font-weight: 700;
+    margin-bottom: 0px;
 }
 .nav-title-align span {
     color: white;
@@ -83,14 +82,23 @@ audio:focus {
 
 /* footer and bottom component styles */
 footer {
-    position: absolute;
-    bottom: 0;
+    
     width: 100%;
     background-color: black;
     color: white;
     padding: 5%;
     text-align: center;
     font-size: 10px;
+}
+/* ==================== MEDIA QUERY ----------------- */
+@media only screen and (min-width: 389px) {
+    header {
+        height: 70px;
+    }
+    .nav-title-align p {
+        margin-bottom: 5px;
+        margin-top: 5px;
+    } 
 }
 /* this will handle all responsive stuffs for mobile and tablet */
 @media only screen and (min-width: 668px) {
@@ -105,6 +113,8 @@ footer {
     }
     .nav-title-align p {
         font-size: 16px;
+        margin-bottom: 10px;
+        margin-top: 0;
     }
     .nav-title-align span {
         font-size: 14px;
