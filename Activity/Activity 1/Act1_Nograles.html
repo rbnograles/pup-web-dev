@@ -10,36 +10,45 @@
     </head>
     <body>
         <nav role="navigation">
-            <div class="nav-header-text">
-                <h3>Axios</h3>
-                <p>Order Manager</p>
+            <div class="d-flex">
+                <img src="./assets/axios.png" alt="Axios Logo"/>
+                <div class="nav-text-header">
+                    <h3>Axios</h3>
+                    <p>Order Manager</p>
+                </div>
             </div>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+            <div class="nav-pull-right">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a class="active" href="#">Shop</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
         </nav>
         <div role="page body content" class="page-body">
             <div class="card page-banner">
                 <h1>Purchase Order Form</h1>
                 <p>Customize your orders how ever you want</p>
             </div>
-            <div class="card shadowed">
-                <h2>Customer Information Card</h2>
-                <div class="d-flex">
-                    <div>
+            <div class="card">
+                <div class="card-header d-flex mb-2">
+                    <div class="card-item-left">
                         <img src="./assets/axios.png" alt="Axios Logo"/>
-                        <h1>Axios</h1>
+                        <div class="card-item-text-header">
+                            <h3>Axios</h3>
+                            <p>Customer Information Card</p>
+                        </div>
                     </div>
-                    <div>
-                        <p>Order No. 1024-XXX1</p>
-                        <p>Order Date: October 24, 2020</p>
+                    <div class="card-item-right">
+                        <p>Order No.: <span>1024-XXX1</span></p>
+                        <p>Order Date: <span>October 24, 2020</span></p>
                     </div>
                 </div>
-                <form action="#" method="POST">
+                <hr/>
+                <form class="mt-2" action="#" method="POST">
                     <div class="input-holder">
-                        <label>Customer Name</label>
+                        <label>Customer Name<span class="required"> *</span></label>
                         <input type="text" class="input-field" autocomplete="off" />
                     </div>
                     <div class="input-holder">
@@ -50,21 +59,177 @@
                         <label>Contact Name</label>
                         <input type="text" class="input-field" autocomplete="off" />
                     </div>
-                    <div class="d-flex">
+                    <div class="input-group">
                         <div class="input-holder">
-                            <label>Telephone No.</label>
+                            <label>Telephone No.<span class="required"> *</span></label>
                             <input type="text" class="input-field" autocomplete="off" />
                         </div>
                         <div class="input-holder">
-                            <label>Mobile No.</label>
+                            <label>Mobile No.<span class="required"> *</span></label>
                             <input type="text" class="input-field" autocomplete="off" />
                         </div>
                     </div>
                     <div class="input-holder">
-                        <label>Email Address</label>
+                        <label>Email Address<span class="required"> *</span></label>
                         <input type="email" class="input-field" autocomplete="off" />
                     </div>
                 </form>
+            </div>
+            <div class="card">
+                <h2 class="mb-2">Products to Order</h2>
+                <div class="table-container">
+                    <table class="blueTable">
+                        <thead>
+                            <tr>
+                                <th>Unit</th>
+                                <th>Quantity</th>
+                                <th>Product Code</th>
+                                <th>Description</th>
+                                <th>Unit Price</th>
+                                <th>Total Price</th>
+                            </tr>
+                        </thead>
+                        <!-- table footer tab -->
+                        <tfoot>
+                            <tr>
+                                <td colspan="6">
+                                    <div class="links">
+                                        <a href="#">&laquo;</a> 
+                                        <a class="active" href="#">1</a> 
+                                        <a href="#">2</a> 
+                                        <a href="#">3</a> 
+                                        <a href="#">4</a> 
+                                        <a href="#">&raquo;</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <select class="table-select" name="unit" id="unit">
+                                        <option value="" selected>Select an item</option>
+                                        <option value="Sneakers Focus">Sneakers Focus</option>
+                                        <option value="Dsada Sync">Dsada Sync</option>
+                                        <option value="True Kicks">True Kicks</option>
+                                        <option value="audi">Audi</option>
+                                    </select>
+                                </td>
+                                <td><input type="number" class="table-input" placeholder="Number of items" /></td>
+                                <td>UN-X-1123</td>
+                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, at.</td>
+                                <td class="r-align">&#8369; XXXX.XX</td>
+                                <td class="r-align">&#8369; XXXX.XX</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <select class="table-select" name="unit" id="unit">
+                                        <option value="" selected>Select an item</option>
+                                        <option value="Sneakers Focus">Sneakers Focus</option>
+                                        <option value="Dsada Sync">Dsada Sync</option>
+                                        <option value="True Kicks">True Kicks</option>
+                                        <option value="audi">Audi</option>
+                                    </select>
+                                </td>
+                                <td><input type="number" class="table-input" placeholder="Number of items" /></td>
+                                <td>UN-X-1123</td>
+                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, at.</td>
+                                <td class="r-align">&#8369; XXXX.XX</td>
+                                <td class="r-align">&#8369; XXXX.XX</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <select class="table-select" name="unit" id="unit">
+                                        <option value="" selected>Select an item</option>
+                                        <option value="Sneakers Focus">Sneakers Focus</option>
+                                        <option value="Dsada Sync">Dsada Sync</option>
+                                        <option value="True Kicks">True Kicks</option>
+                                        <option value="audi">Audi</option>
+                                    </select>
+                                </td>
+                                <td><input type="number" class="table-input" placeholder="Number of items" /></td>
+                                <td>UN-X-1123</td>
+                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, at.</td>
+                                <td class="r-align">&#8369; XXXX.XX</td>
+                                <td class="r-align">&#8369; XXXX.XX</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <select class="table-select" name="unit" id="unit">
+                                        <option value="" selected>Select an item</option>
+                                        <option value="Sneakers Focus">Sneakers Focus</option>
+                                        <option value="Dsada Sync">Dsada Sync</option>
+                                        <option value="True Kicks">True Kicks</option>
+                                        <option value="audi">Audi</option>
+                                    </select>
+                                </td>
+                                <td><input type="number" class="table-input" placeholder="Number of items" /></td>
+                                <td>UN-X-1123</td>
+                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, at.</td>
+                                <td class="r-align">&#8369; XXXX.XX</td>
+                                <td class="r-align">&#8369; XXXX.XX</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <select class="table-select" name="unit" id="unit">
+                                        <option value="" selected>Select an item</option>
+                                        <option value="Sneakers Focus">Sneakers Focus</option>
+                                        <option value="Dsada Sync">Dsada Sync</option>
+                                        <option value="True Kicks">True Kicks</option>
+                                        <option value="audi">Audi</option>
+                                    </select>
+                                </td>
+                                <td><input type="number" class="table-input" placeholder="Number of items" /></td>
+                                <td>UN-X-1123</td>
+                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, at.</td>
+                                <td class="r-align">&#8369; XXXX.XX</td>
+                                <td class="r-align">&#8369; XXXX.XX</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <select class="table-select" name="unit" id="unit">
+                                        <option value="" selected>Select an item</option>
+                                        <option value="Sneakers Focus">Sneakers Focus</option>
+                                        <option value="Dsada Sync">Dsada Sync</option>
+                                        <option value="True Kicks">True Kicks</option>
+                                        <option value="audi">Audi</option>
+                                    </select>
+                                </td>
+                                <td><input type="number" class="table-input" placeholder="Number of items" /></td>
+                                <td>UN-X-1123</td>
+                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, at.</td>
+                                <td class="r-align">&#8369; XXXX.XX</td>
+                                <td class="r-align">&#8369; XXXX.XX</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <select class="table-select" name="unit" id="unit">
+                                        <option value="" selected>Select an item</option>
+                                        <option value="Sneakers Focus">Sneakers Focus</option>
+                                        <option value="Dsada Sync">Dsada Sync</option>
+                                        <option value="True Kicks">True Kicks</option>
+                                        <option value="audi">Audi</option>
+                                    </select>
+                                </td>
+                                <td><input type="number" class="table-input" placeholder="Number of items" /></td>
+                                <td>UN-X-1123</td>
+                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, at.</td>
+                                <td class="r-align">&#8369; XXXX.XX</td>
+                                <td class="r-align">&#8369; XXXX.XX</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="d-flex mt-2">
+                    <div class="input-holder">
+                        <label>Grand Total</label>
+                        <input type="number" class="input-field" value="1234.56"/>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn-canceled">Discard</button>
+                        <button class="btn-success">Purchase</button>
+                    </div>
+                </div>
             </div>
         </div>
         <footer role="page footer">All rights reserve &copy; 2020 Axios Purchasing Corporation</footer>
