@@ -1,0 +1,22 @@
+* {
+    /* basic css clean */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* set body behavior */
+body {
+    scroll-behavior: smooth;
+    font-family: Poppins, Arial, Helvetica, sans-serif; /* setting fallback font styles */
+    position: relative;
+}
+
+/* footer and bottom component styles */
+footer {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 2%;
+    text-align: center;
+    font-size: 15px;
+}
