@@ -40,6 +40,9 @@ body {
     font-family: Poppins, Arial, Helvetica, sans-serif; /* setting fallback font styles */
     position: relative;
     background-color: var(--body-bg-color);
+    
+    /* for IE */
+    background-color: #eff1f3;
 }
 .mt-2 {
     margin-top: 20px;
@@ -60,19 +63,23 @@ body {
 a {
     text-decoration: none;
 }
+.d-flex {
+    display: flex;
+}
 /* navbar */
 nav {
     background-color: var(--nav-bg-colorL);
+    background-color: #33B5E5;
     padding: .7% 1%;
-    display: flex;
-}
-.d-flex {
     display: flex;
 }
 nav img {
     width: 50px;
     height: 50px;
     margin-right: 10px;
+}
+.nav-icon {
+    display: none;
 }
 .nav-text-header {
     letter-spacing: .75px;
@@ -108,11 +115,15 @@ nav ul li a {
 }
 nav ul li a.active {
     background-color: var(--active);
+    background-color: #1C6EA4;
 }
 
 /* main body content */
 .page-body {
     padding: 10px 10%;
+}
+form {
+    padding: 10px;
 }
 .card {
     padding: 2%; 
@@ -126,6 +137,7 @@ nav ul li a.active {
 .card.page-banner {
     color: white;
     background-color: var(--nav-bg-colorL);
+    background-color: #33B5E5;
 }
 .card-item-left {
     display: flex;
@@ -151,6 +163,7 @@ nav ul li a.active {
 }
 .card-item-right p span {
     color: var(--active);
+    color: #1C6EA4;
 }
 
 /* inputs */
@@ -179,7 +192,9 @@ nav ul li a.active {
     color: black;
     text-transform: capitalize;
     background-color: var(--light-bg-input);
+    background-color: #d4e6f6;
     border: 1px solid var(--nav-bg-colorL);
+    border: 1px solid #33B5E5;
 }
 
 /* buttons */
@@ -193,6 +208,7 @@ nav ul li a.active {
 .btn-canceled {
     color: white;
     background-color: var(--rejected-color);
+    background-color: #ff1919;
     border: none;
     padding: 10px 15px;
     font-size: 13px;
@@ -205,6 +221,7 @@ nav ul li a.active {
 .btn-success {
     color: white;
     background-color: var(--success-color);
+    background-color: #4a934a;
     border: none;
     padding: 10px 15px;
     font-size: 13px;
@@ -226,11 +243,15 @@ nav ul li a.active {
     transition: all 0.25s ease;  
     padding: 5px 5px;          
     border: 1px solid var(--nav-bg-colorL);
+    border: 1px solid #33B5E5;
 }
 .table-select {
     padding: 5px 5px; 
     border: 1px solid var(--nav-bg-colorL);
+    border: 1px solid #33B5E5;
     outline: none;
+    /* hold white bg for mobile view */
+    background-color: white;
 }
 table.blueTable {
     border: none;
@@ -241,12 +262,14 @@ table.blueTable {
 }
 table.blueTable td, table.blueTable th {
     border: 1px solid var(--light-bg-input);
+    border: 1px solid #d4e6f6;
     padding: 5px 2px;
 }
 table.blueTable tbody td {
     font-size: 13px;
     text-align: center;
     border: 2px solid var(--light-bg-input);
+    border: 2px solid #d4e6f6;
 }
 table.blueTable tr:nth-child(even) {
     background: #D0E4F5;
@@ -260,11 +283,13 @@ table.blueTable thead th {
     padding: 10px;
     font-size: 13px;
     color: #FFFFFF;
+
+    /* for internet explorer */
+    background: #1C6EA4;
 }
 table.blueTable thead th:first-child {
     border-left: none;
 }
-
 table.blueTable tfoot {
     color: white;
     background: #D0E4F5;
@@ -292,4 +317,57 @@ footer {
     padding: 1.5%;
     text-align: center;
     font-size: 15px;
+}
+
+/* responsive design */
+/* 600px and below for tablets and phones */
+@media only screen and (max-width: 600px) {
+    nav {
+        padding: 3%;
+    }
+    .nav-pull-right ul {
+        display: none;
+    }
+    .nav-pull-right {
+        position: absolute;
+        right: 0;
+        padding: 10px;
+    }
+    .nav-icon {
+        display: unset;
+        color: white;
+        font-size: 30px;
+    }
+    .card.page-banner {
+        padding: 3.5%;
+    }
+    .card.page-banner h1 {
+        font-size: 25px;
+    }
+    .page-body {
+        padding: 10px 5%;
+    }
+    .card-header.d-flex{
+        display: unset;
+    }
+    .card-item-right {
+        position: unset;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 5px;
+    }
+    .card-item-right p {
+        font-size: 12px;
+    }
+    form {
+        padding: 2%;
+    }
+    .btn-group {
+        padding: 3% 0;
+    }
+    footer {
+        padding: 2%;
+    }
 }

@@ -1,0 +1,3 @@
+discardPurchase = () => {
+    alert('yey')
+}
