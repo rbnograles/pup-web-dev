@@ -4,6 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 :root {
     --nav-bg-colorL: #33B5E5;
     --body-bg-color:#eff1f3;
@@ -36,13 +39,17 @@
 
 /* set body behavior */
 body {
-    scroll-behavior: smooth;
     font-family: Poppins, Arial, Helvetica, sans-serif; /* setting fallback font styles */
     position: relative;
     background-color: var(--body-bg-color);
     
     /* for IE */
     background-color: #eff1f3;
+}
+.fa-bars {
+    width: 10px;
+    height: 20px;
+    color: white;
 }
 .mt-2 {
     margin-top: 20px;
@@ -66,6 +73,22 @@ a {
 .d-flex {
     display: flex;
 }
+.success {
+    color: white;
+    background-color: var(--success-color);
+    background-color: #4a934a;
+    padding: 1.5% 2%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.error {
+    color: white;
+    background-color: var(--rejected-color);
+    background-color: #ff1919;
+    padding: 1.5% 2%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
 /* navbar */
 nav {
     background-color: var(--nav-bg-colorL);
@@ -77,9 +100,6 @@ nav img {
     width: 50px;
     height: 50px;
     margin-right: 10px;
-}
-.nav-icon {
-    display: none;
 }
 .nav-text-header {
     letter-spacing: .75px;
@@ -170,6 +190,11 @@ form {
 .input-group {
     display: flex;
     flex-grow: 1;
+}
+.input-err {
+    border: 2px solid var(--rejected-color) !important;
+    border: 2px solid #ff1919 !important;
+    background-color: #ee9999 !important;
 }
 .input-holder {
     display: flex;
@@ -333,11 +358,6 @@ footer {
         right: 0;
         padding: 10px;
     }
-    .nav-icon {
-        display: unset;
-        color: white;
-        font-size: 30px;
-    }
     .card.page-banner {
         padding: 3.5%;
     }
@@ -347,6 +367,16 @@ footer {
     .page-body {
         padding: 10px 5%;
     }
+
+    /* appends for internet explorer */
+    .ie11-append-dis {
+        display: inherit;
+    }
+    .ie11-append-pos {
+        position: inherit;
+        padding: 0 20px !important;
+    }
+
     .card-header.d-flex{
         display: unset;
     }
