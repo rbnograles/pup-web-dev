@@ -66,6 +66,11 @@ function sendPurchase() {
         root.innerHTML = 'Hooray! Your purchase has been submitted.'
         root.classList.remove('error');
         root.classList.add('success');
+        // remove input error
+        customerName.classList.remove('input-err')
+        mobileNum.classList.remove('input-err')
+        telNum.classList.remove('input-err')
+        email.classList.remove('input-err')
         // scroll to the top form
         customerForm.scrollIntoView(true);
     }
