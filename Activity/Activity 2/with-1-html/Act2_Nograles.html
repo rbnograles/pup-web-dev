@@ -1,45 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="IE=edge; charset=UTF-8">
     <title>Coffee Shop</title>
-    <link rel="stylesheet" href="./main.css" />
-  </head>
-  <body>
-    <header class="header">
-      <h1>Jake's Coffee Shop</h1>
-    </header>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <div id="container">
+        <div id="logo">
+            <h1>Jake's Coffee Shop</h1>
+        </div>
+        <div id="leftcolumn">
+            <a href="#home" class="navBar" onclick="homeFunc()">Home</a>
+            <a href="#menu" class="navBar" onclick="menuFunc()">Menu</a>
+            <a href="#music" class="navBar" onclick="musicFunc()">Music</a>
+            <a href="#jobs" class="navBar" onclick="jobsFunc()">Jobs</a>
+        </div>
+        <div id="rightcolumn">
+            <p>Come in and experience...</p>
+            <img src="./Assets/coffee bg.jpg" id="coffeePic" alt="coffee cup" width="200">
+            <ul>
+                <li>Specialty Coffee and tea</li>
+                <li>Freshly made sandwiches</li>
+                <li>Bagels, Muffins and Organic Snacks</li>
+                <li>Music and Poetry Readings</li>
+                <li>Open Mic Nights</li>
+                <li>...</li>
+            </ul>
+            <p id="contact">23 Pine Road <br/> Nottingham, NGI 5YU <br/> 0115 9324567</p>
 
-    <main>
-        <nav>
-            <a href="./Act2_Nograles.html">Home</a>
-            <a href="./menu.html">Menu</a>
-            <a href="./music.html">Music</a>
-            <a href="./jobs.html">Jobs</a>
-          </nav>
+        </div>
+        <div id="footer">
+            Copyright &copy; 2011 Jake's Coffee House<br>
+            <a href="mailto:jake@jcoffee.com">jake@jcoffee.com</a>
+        </div>
+    </div>
+    
+    <script>
+        function homeFunc() {
+            var homeCont =
+            "<p>Come in and experience...</p>" +
+            "<img src='./Assets/coffee bg.jpg' id='coffeePic' alt='coffee cup' width='200'>" +
+            "<ul>" +
+                "<li>Specialty Coffee and tea</li>" +
+                "<li>Freshly made sandwiches</li>" +
+                "<li>Bagels, Muffins and Organic Snacks</li>" +
+                "<li>Music and Poetry Readings</li>" +
+                "<li>Open Mic Nights</li>" +
+                "<li>...</li>" +
+            "</ul>" +
+            "<p id='contact'>23 Pine Road <br/> Nottingham, NGI 5YU <br/> 0115 9324567</p>"
 
-      <section class="main">
-        <p>Come in and experience...</p>
+            document.getElementById("rightcolumn").innerHTML = homeCont;
+        }
+        
+        function menuFunc() {
+          var menuCont = 
+              "<h2>Menu</h2>"+
+              "<hr>"+
+              "<h3>Coffee and Beverages</h3>"+
+              "<p>Try and taste a plethora of coffee to your liking!</p>"+
 
-        <ul>
-          <li>Specialty Coffee and Tea</li>
-          <li>Freshly made sandwiches</li>
-          <li>Bagels, Muffins, and Organic Snacks</li>
-          <li>Music and Poetry Readings</li>
-          <li>Open mic nights</li>
-          <li>...</li>
-        </ul>
+              "<ul>"+
+                "<li>Special Espresso</li>"+
+                "<li>Black Coffee</li>"+
+                "<li>Decaf</li>"+
+                "<li>Cappuccino</li>"+
+                "<li>Hot Chocolate</li>"+
+              "</ul>"+
 
-        <p>23 Pine Road</p>
-        <p>Nottingham, NG1 5YU</p>
-        <p>0115 9324567</p>
-        <img src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/hub-image-coffee-e732616.jpg?quality=90&resize=504,458" alt="coffee">
-      </section>
-    </main>
-    <footer>
-      <p>Copyright &copy; 2011 Jake's Coffee House</p>
-      <a href="mailto:jake@jcoffee.com">jake@jcoffee.com</a>
-    </footer>
-  </body>
+              "<h3>Bread and Pastry</h3>"+
+              "<p>Indulge with our premium bread freshly baked from oven.</p>"+
+
+              "<ul>"+
+                "<li>Pandesal</li>"+
+                "<li>Pandecoco</li>"+
+                "<li>Strawberry Cake</li>"+
+                "<li>Blueberry Courgette Pie</li>"+
+              "</ul>"
+
+          document.getElementById("rightcolumn").innerHTML = menuCont;
+        }
+
+        function musicFunc() {
+            var musicCont = 
+                "<div id='audioDiv'>" +
+                    "<div id='audioTitle'>" +
+                        "<p id='first'>Rude - Walk off the Earth</p>" +
+                        "<p>OB-LA-DI, OB-LA-DA - GABRIELA BEE (Beatles Cover)</p>" +
+                        "<p>Magi: The Kingdom of Magic - 'Hikari'</p>" +
+                    "</div>" +
+                    "<div id='songs'>" +
+                        "<audio src='' controls></audio>" +
+                        "<audio src='' controls></audio>" +
+                        "<audio src='' controls></audio>" +
+                    "</div>" +
+                "</div>"
+
+            document.getElementById("rightcolumn").innerHTML = musicCont;
+        }
+
+        function jobsFunc() {
+            jobsCont = 
+               "<h2>Jobs</h2>" +
+              "<hr>" +
+              "<h3>Content Creator</h3>"+
+             " <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, illum. Nisi veniam earum mollitia repellat sunt, facere accusantium consequuntur! Architecto molestiae delectus, atque blanditiis quasi numquam ut perferendis quas rem aperiam voluptates exercitationem sapiente minus!</p>" +
+              "<br />" +
+              "<h3>Barista</h3>" +
+              "<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus ratione dolore officia aliquam est sequi debitis quos consectetur maxime ullam illum magni eum eligendi exercitationem dolorum, modi reprehenderit nemo ab, similique soluta, rerum eius dignissimos beatae! Cum ducimus officia culpa!" +
+              "</p>"+
+              "<br>"+
+              "<h3>Janitors</h3>" +
+              "<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa recusandae, non quaerat optio cum nam."+
+              "</p>"+
+              "<br>"+
+             " <h3>Shift Managers</h3>"+
+              "<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae laudantium vel nesciunt molestias ut labore unde consequatur nulla porro esse."+
+              "</p>"+
+              "<br>"+
+              "<h3>Branch Manager</h3>"+
+              "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, dolorem!"+
+              "</p>"
+
+            document.getElementById("rightcolumn").innerHTML = jobsCont;
+        }
+
+    </script>
+    
+</body>
 </html>

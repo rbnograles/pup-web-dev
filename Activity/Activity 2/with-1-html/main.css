@@ -1,64 +1,107 @@
-html {
-    font-family: 'Verdana', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #ffffcc;
-}
-
 body {
-    width: 70%;
-    margin: 4rem auto;
-    border: 3px solid black;
+    background-color: #ffffcc;
+    color: #330000;
+    font-family: Verdana, Tahoma, sans-serif;
 }
 
-header, footer {
-    background: #ccaa66;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 2rem 0;
-    border-top: 3px solid black;
-    border-bottom: 3px solid black;
+#container {
+    margin-top: 20px;
+    margin: 0 auto;
+    height: fit-content;
+    width: 750px;
+    border-style: solid;
 }
-
-footer > * {
-    font-style: italic;
-    font-size: 0.75rem;
-    line-height: 0.2rem;
+#logo {
+    background-color: #CCAA66;
+    text-align: center;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    height: 100px;
 }
-
-
-.main {
-    background: #f1e8b0;
-    flex-grow: 1;
+#leftcolumn {
+    background-color: #E8D882;
     position: relative;
-    padding-left: 25px;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    padding-right: 5rem;
+    padding-left: 20px;
+    left: 0;
+    width: 130px;
+    height: 320px;
+    float: left;
+    white-space: pre-line;
+}
+#rightcolumn {
+    background-color: #F1E8B0;
+    position: relative;
+    width: 580px;
+    padding: 10px;
+    float: right;
 }
 
-main {
-    display: flex;
-    width: 100%;
-}
-
-nav {
-    background: #E8D882;
-    display: flex;
-    flex-direction: column;
-    padding-left: 2rem;
-    padding-right: 6rem;
-    line-height: 3rem;
-}
-
-nav > a {
+.navBar {
+    float: center;
+    display: block;
+    color:black;
+    text-align: left;
+    padding: 14px 16px;
     text-decoration: none;
 }
-
-section > img {
+.navBar:hover {
+    background-color:#F1E8B0;
+    color: #922e27;
+}
+#contact {
+    margin-top: 50px;
+}
+#coffeePic {
     position: absolute;
-    right: 0;
-    width: 25%;
-    bottom: 0;
-    margin: 1rem 1rem;
+    right: 20px;
+    bottom: 20px;
+    
+}
+#footer {
+    background-color: #CCAA66;
+    border-top-style: solid;
+    height: 62px;
+    text-align: center;
+    font-style: italic;
+    width: 100%;
+    margin-top: 320px;
+    padding-top: 10px;
+}
+
+
+/* Menu */
+#d-flex {
+    display: flex;
+    flex-grow: 1;
+}
+#d-flex div {
+    width: 100%;
+    padding-left: 20px;
+}
+
+/* Music */
+#audioDiv {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+}
+#audioTitle p {
+    height: 60px;
+    width: 230px;
+    padding-left: 10px;
+}
+#first {
+    padding-top: 10px;
+}
+#songs audio {
+    width: 300px;
+    height: 50px;
+    padding: 13px 0;
+    float: right;
+    padding-right: 10px;
+}
+
+/* Jobs */
+#jobsDiv {
+    margin-left: 20px;
 }
