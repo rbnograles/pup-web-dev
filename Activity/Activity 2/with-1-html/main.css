@@ -5,75 +5,82 @@ body {
 }
 
 #container {
-    margin-top: 20px;
-    margin: 0 auto;
-    height: fit-content;
-    width: 750px;
-    border-style: solid;
+    margin: 5% auto;
+    width: 800px;
+    border: 2px solid #330000;   
+    border-radius: 10px;
 }
+
+.d-flex {
+    display: flex;
+}
+
 #logo {
     background-color: #CCAA66;
     text-align: center;
-    border-bottom-style: solid;
-    border-top-style: solid;
-    height: 100px;
-}
-#leftcolumn {
-    background-color: #E8D882;
-    position: relative;
-    padding-left: 20px;
-    left: 0;
-    width: 130px;
-    height: 320px;
-    float: left;
-    white-space: pre-line;
-}
-#rightcolumn {
-    background-color: #F1E8B0;
-    position: relative;
-    width: 580px;
-    padding: 10px;
-    float: right;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 3px solid #330000;
+    padding: 2%;
 }
 
-.navBar {
+h1 {
+    margin: 0 !important;
+}
+
+
+#leftcolumn {
+    background-color: #E8D882;
+    padding: 20px;
+    width: 200px;
+    white-space: pre-line;
+}
+
+.nav-item {
+    text-decoration: none;
     float: center;
     display: block;
     color:black;
     text-align: left;
     padding: 14px 16px;
     text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
 }
-.navBar:hover {
-    background-color:#F1E8B0;
-    color: #922e27;
+
+.nav-item:hover {
+    background-color: #CCAA66;
+    transition: all ease-in .25s;
 }
-#contact {
-    margin-top: 50px;
+
+#rightcolumn {
+    background-color: #F1E8B0;
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    float: right;
 }
+
+#footer {
+    background-color: #CCAA66;
+    text-align: center;
+    font-style: italic;
+    padding: 2%;
+    border-radius: 0 0 10px 10px;
+}
+
 #coffeePic {
     position: absolute;
     right: 20px;
     bottom: 20px;
     
 }
-#footer {
-    background-color: #CCAA66;
-    border-top-style: solid;
-    height: 62px;
-    text-align: center;
-    font-style: italic;
-    width: 100%;
-    margin-top: 320px;
-    padding-top: 10px;
-}
-
 
 /* Menu */
 #d-flex {
     display: flex;
     flex-grow: 1;
 }
+
 #d-flex div {
     width: 100%;
     padding-left: 20px;
@@ -104,4 +111,4 @@ body {
 /* Jobs */
 #jobsDiv {
     margin-left: 20px;
-}
+} 
