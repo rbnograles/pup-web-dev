@@ -8,18 +8,23 @@
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
+
+
+
     <div id="container">
         <div id="logo">
             <h1>Jake's Coffee Shop</h1>
         </div>
 
         <div class="d-flex">
+
           <div id="leftcolumn">
             <a href="#home" class="nav-item" onclick="homeFunc()">Home</a>
             <a href="#menu" class="nav-item" onclick="menuFunc()">Menu</a>
             <a href="#music" class="nav-item" onclick="musicFunc()">Music</a>
             <a href="#jobs" class="nav-item" onclick="jobsFunc()">Jobs</a>
           </div>
+
           <div id="rightcolumn">
               <p>Come in and experience...</p>
               <img src="./Assets/coffee bg.jpg" id="coffeePic" alt="coffee cup" width="200">
@@ -130,6 +135,39 @@
 
             document.getElementById("rightcolumn").innerHTML = jobsCont;
         }
+
+
+        [
+            {
+                _id: 1,
+                recipeName: "Recipe 1",
+                tag: ["tag1", "tag2", "tag3"],
+                recipeList: ["3 Egg", "2 Carots", "1Bread"],
+                author: "Mama Mapi",
+                type: "public",
+                cost: 200
+            },
+            {
+                _id: 1,
+                recipeName: "Recipe 1",
+                tag: ["tag1", "tag2", "tag3"],
+                recipeList: ["3 Egg", "2 Carots", "1Bread"],
+                author: "Mama Mapi",
+                type: "public",
+                cost: 200
+            },
+            {
+                _id: 1,
+                recipeName: "Recipe 1",
+                tag: ["tag1", "tag2", "tag3"],
+                recipeList: ["3 Egg", "2 Carots", "1Bread"],
+                author: "Mama Mapi",
+                type: "public",
+                cost: 200
+            }
+        ]
+
+
 
     </script>
     

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUP Map Simulator</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class="content">
+        <div class="d-flex">
+            <div class="row card">
+                <img id="imageid" class="mapped-image" src="./Assets/PUPMAP.png" alt="Workplace" usemap="#workmap">
+                <map name="workmap">
+                    <area 
+                        shape="rect" 
+                        coords="373, 47, 465, 93" 
+                        alt="PUP Gymnasium" 
+                        onmouseover="showImage('./Assets/gym.jpg', 10)"
+                    >
+                    <area 
+                        shape="poly" 
+                        coords="198, 223, 202, 237, 212, 242, 227, 239, 233, 226" 
+                        alt="Amphitheater" 
+                        onmouseover="showImage('./Assets/amphi.jpg', 1)"
+                    >
+                    <area 
+                        shape="circle" 
+                        coords="277, 337, 40" 
+                        alt="Interfaith Chappel" 
+                        onmouseover="showImage('./Assets/chappel.jpg', 11)"
+                    >
+                    <area 
+                        shape="poly" 
+                        href="#"
+                        coords="416, 239, 428, 231 444, 228, 460, 232, 477, 240, 490, 259, 491, 289, 438, 366, 421, 374, 400, 374, 382, 369, 370, 357, 362, 340, 361, 322, 364, 310" 
+                        alt="PUP Oval" 
+                        onmouseover="showImage('./Assets/Oval.jpg', 24)"
+                    >
+                    <area 
+                        shape="poly" 
+                        coords="84, 51, 131, 79, 129, 87, 101, 72, 96, 80, 134, 104, 131, 110, 91, 88, 85, 96, 140, 130, 136, 137, 122, 130, 118, 138, 151, 157, 147, 165, 63, 118, 75, 100, 57, 89, 70, 66, 90, 77, 96, 69, 78, 58"  
+                        alt="High School Laboratory" 
+                        onmouseover="showImage('./Assets/Laboratory.jpg', 12)"
+                    >
+                    <area 
+                        shape="circle" 
+                        coords="208, 290, 21" 
+                        alt="Main Building Dome" 
+                        onmouseover="showImage('./Assets/dome.jpg', 14)"
+                    >
+                    <area 
+                        shape="poly" 
+                        coords="220, 266, 233,294, 290, 264, 287, 258, 289, 255, 286, 251, 288, 248, 279, 232" 
+                        alt="North Wing" 
+                        onmouseover="showImage('./Assets/northwing.jpg', 16)"
+                    >
+                    <area 
+                        shape="poly" 
+                        coords="221, 313, 191, 312, 189, 384, 221, 388" 
+                        alt="East wing" 
+                        onmouseover="showImage('./Assets/eastwing.jpg', 15)"
+                    >
+                    <area 
+                        shape="poly" 
+                        coords="123, 251, 128, 255, 125,261, 181, 293, 196, 265, 137, 229" 
+                        alt="West wing" 
+                        onmouseover="showImage('./Assets/westwing.png', 18)"
+                    >
+                    <area 
+                        shape="poly" 
+                        coords="113, 293, 143, 277, 147, 286, 151, 285, 182, 344, 180, 348, 185, 357, 158, 375, 152, 363, 148, 366" 
+                        alt="South wing" 
+                        onmouseover="showImage('./Assets/southwing.png', 17)"
+                    >
+                </map>
+                <div id="coor"></div>
+            </div>
+            <div class="row card">
+
+                <img id="image-renderer" src="" class="d-none" />
+                
+                <div id="location-content" class="d-none">
+                    <p id="location-title"></p>
+                    <span id="location-desc"></span>
+                </div>
+
+                <h1 id="previewTitle">Hover on a numbered location to preview</h1> 
+                <ul id="list-display" class="list-display">
+                    <li>1. Amphitheater</li>
+                    <li>10. PUP Gymnasium</li>
+                    <li>11. Interfaith Chapel</li>
+                    <li>12. Laboratory High School</li>
+                    <li>14. Main Building – Dome</li>
+                    <li>15. Main Building - East Wing</li>
+                    <li>16. Main Building - North Wing</li>
+                    <li>17. Main Building - South Wing</li>
+                    <li>18. Main Building - West Wing</li>
+                    <li>24. PUP Oval</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+
+    <script type="text/javascript">
+
+        // image renderer toggle shot and display
+        function showImage(data, number) {
+            let imageRenderer = document.getElementById('image-renderer')
+            let previewTitle = document.getElementById('previewTitle')
+            let list = document.getElementById('list-display')
+            let locationContent = document.getElementById('location-content')
+            let locationTitle = document.getElementById('location-title')
+            let loctionDesc = document.getElementById('location-desc')
+
+            switch(number){
+                case 1:
+                    locationContent.classList.remove("d-none")
+                    locationContent.classList.add('mt-2')
+                    locationTitle.innerHTML = "Amphitheater"
+                    loctionDesc.innerHTML= "This is an open space for every students of the campus to sit in and relax, they can talk and eat their foods while enjoying each others company in this place."
+                    break;
+                case 10:
+                    locationContent.classList.remove("d-none")
+                    locationContent.classList.add('mt-2')
+                    locationTitle.innerHTML = "PUP Gymnasium"
+                    loctionDesc.innerHTML= "Sports events are ussualy held here, some are intramurals level or college vs college events amongst PUP's difference colleges leauge, this is a huge enviroment where you must have a guiding instructor in order to use this facility."
+                    break;
+                case 11:
+                    locationContent.classList.remove("d-none")
+                    locationContent.classList.add('mt-2')
+                    locationTitle.innerHTML = "Interfaith Chapel"
+                    loctionDesc.innerHTML= "Masses are held in here, although some events are placed in here like medical meetings or just some spiritual gatherings by various religious groups in the university."
+                    break;
+                case 12:
+                    locationContent.classList.remove("d-none")
+                    locationContent.classList.add('mt-2')
+                    locationTitle.innerHTML = "Laboratory High School"
+                    loctionDesc.innerHTML= "The Polytechnic University of the Philippines are both high school and college level campus in one place, laboratory high school is a place in the campus that holds the scientific researches as well as the a playground for young high schooler minds to developed and learn stuffs form there future development."
+                    break;
+                case 14:
+                    locationContent.classList.remove("d-none")
+                    locationContent.classList.add('mt-2')
+                    locationTitle.innerHTML = "Main Building - Dome"
+                    loctionDesc.innerHTML= "This is the center part of the main building series, it is the meeting place or the bridge between 4 places, North, East West and South wing, in here you can find services at the lowest part of the dome, it also has a elliptical way to climb the building to dissabled people."
+                    break;
+                case 15:
+                    locationContent.classList.remove("d-none")
+                    locationContent.classList.add('mt-2')
+                    locationTitle.innerHTML = "Main Building - East Wing"
+                    loctionDesc.innerHTML= "This is east part of the building, most classes are held here all day long."
+                    break;
+                case 16:
+                    locationContent.classList.remove("d-none")
+                    locationContent.classList.add('mt-2')
+                    locationTitle.innerHTML = "Main Building - North Wing"
+                    loctionDesc.innerHTML= "This is norht part of the building, it can be seen upon entering the university ground this faces the flag pole  standing at the front of the building."
+                    break;
+                case 17:
+                    locationContent.classList.remove("d-none")
+                    locationContent.classList.add('mt-2')
+                    locationTitle.innerHTML = "Main Building - South Wing"
+                    loctionDesc.innerHTML= "This is the part of the main building that is facing the Pasig river behind the school grounds, it is the back most building of the whole campus, it is very windy specially in the afternoon."
+                    break;
+                case 18:
+                    locationContent.classList.remove("d-none")
+                    locationContent.classList.add('mt-2')
+                    locationTitle.innerHTML = "Main Building - West Wing"
+                    loctionDesc.innerHTML= "This is west part of the building, most classes are held here all day long, and some offices."
+                    break;
+                case 24:
+                    locationContent.classList.remove("d-none")
+                    locationContent.classList.add('mt-2')
+                    locationTitle.innerHTML = "PUP Oval"
+                    loctionDesc.innerHTML= "This is the PUP oval, track n field events are held here as well as all the PE classess of most colleges on the main campus. Events and field exercise are often held here because of the huge nature of the field."
+                    break;
+                default: break;
+            }
+
+            imageRenderer.classList.remove("d-none")
+            imageRenderer.classList.add('image-full-width')
+            imageRenderer.src = data
+            previewTitle.classList.add("d-none")
+            list.classList.add("d-none")
+
+            window.addEventListener('mouseout', function () {
+                imageRenderer.classList.add("d-none")
+                locationContent.classList.add('d-none')
+                previewTitle.classList.remove("d-none")
+                list.classList.remove("d-none")
+            });
+        }
+
+       // track mouse movement on the dom
+        window.addEventListener('mousemove', function (e) {
+            var img = document.getElementById('imageid'); 
+            //or however you get a handle to the IMG
+            var width = img.clientWidth;
+            var height = img.clientHeight;
+            var x = e.x - 47
+            var y = e.y - 37
+            document.getElementById('coor').innerHTML = "Image H:" + height + " W:" + width + " && Tracing coordinates @: x:" + x + ", y:"  + y
+        })
+
+    </script>
+    
+</body>
+</html>
