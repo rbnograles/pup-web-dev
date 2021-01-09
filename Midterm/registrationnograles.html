@@ -55,7 +55,7 @@
             <input 
                 style="margin: 5px 0;" 
                 id="age"
-                type="text" 
+                type="number" 
                 name="age" 
                 placeholder="Age"
                 value=""
@@ -72,14 +72,14 @@
             </div>
             <label>Choose a t-shirt size</label>
             <div style="margin: 5px 0;">
-                <input type="radio" name="shirtSize" id="Small" name="size" value="Small">
+                <input type="radio" name="shirtSize" id="Small" value="Small">
                 <label for="Small">Small</label><br>
-                <input type="radio" name="shirtSize" id="Medium" name="size" value="Medium">
+                <input type="radio" name="shirtSize" id="Medium" value="Medium">
                 <label for="Medium">Medium</label><br>
-                <input type="radio" name="shirtSize" id="Large" name="size" value="Large">
+                <input type="radio" name="shirtSize" id="Large" value="Large">
                 <label for="Large">Large</label>
             </div>
-            <button type="button" onclick="saveData()">Sign-up</button>
+            <button id="submitBtn" type="button" disabled="true" onclick="saveData()">Sign-up</button>
         </div>
     </form>
  </body>

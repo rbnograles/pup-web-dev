@@ -1,18 +1,22 @@
 function checkIfEmailIsMatch(){
     const email = document.getElementById('email');
     const emailConfirm = document.getElementById('confirmEmail');
+    const submit = document.getElementById('submitBtn');
     // check if not empty
     if(email.value !== '' && emailConfirm.value !== '') {
         // check if password matches or not
         if(email.value === emailConfirm.value) {
             document.getElementById('message-response').innerHTML = "Email matches!"
+            submit.disabled = false
         }
         else {
             document.getElementById('message-response').innerHTML = "Email doest not match!"
+            submit.disabled = false
         }
     } 
     else {
         document.getElementById('message-response').innerHTML = ""
+        submit.disabled = false
     }
 }
 
