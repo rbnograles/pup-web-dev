@@ -1,0 +1,10 @@
+{
+    "firstName" : "",
+    "lastName" : "",
+    "email": "",
+    "confirmEmail": "",
+    "age": "",
+    "plans": "",
+    "receiveEmail": false,
+    "size": ""
+}
