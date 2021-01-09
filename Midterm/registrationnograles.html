@@ -1,0 +1,75 @@
+<!-- 
+    /**
+    *   NOGRALES, RYAN BRAULIO,
+    *   COMPUTER ENGINEERING TECHNOLOGY 5 - WEB DEVELOPMENT
+    *   First Semester
+    *   BSCPE 3 - 6
+    */
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Registration - Nograles</title>
+ </head>
+ <body>
+    <form action="POST" style=" width: 350px;">
+        <label for="">Sign up now</label>
+        <div style="display: flex; flex-direction: column;">
+            <input style="margin: 5px 0;" type="text" name="firstName" placeholder="First name" onkeypress="setDataToJson('firstName')">
+            <input style="margin: 5px 0;" type="text" name="lastName" placeholder="Last name" onkeypress="setDataToJson('lastName')">
+            <input style="margin: 5px 0;" id="email" type="email" name="email" placeholder="Email" value="">
+            <input style="margin: 5px 0;" id="confirmEmail" type="email" name="emailConfirm" placeholder="Confirm email address" onkeyup="checkIfEmailIsMatch()" value="">
+            <span id="message-response"></span>
+            <input style="margin: 5px 0;" type="text" name="age" placeholder="Age">
+            <label style="margin: 5px 0;" for="plans">Choose a plan:</label>
+            <select name="plans" id="plans">
+                <option value="Basic">Basic</option>
+                <option value="Premium">Premium</option>
+                <option value="Titanium options">Titanium options</option>
+            </select>
+            <div style="display: flex; margin: 5px 0;">
+                <input type="checkbox" name="receiveEmail">
+                <label for="placeMeToEmailList">Do you wish to receive emails?</label>
+            </div>
+            <label>Choose a t-shirt size</label>
+            <div style="margin: 5px 0;">
+                <input type="radio" id="Small" name="size" value="Small">
+                <label for="Small">Small</label><br>
+                <input type="radio" id="Medium" name="size" value="Medium">
+                <label for="Medium">Medium</label><br>
+                <input type="radio" id="Large" name="size" value="Large">
+                <label for="Large">Large</label>
+            </div>
+            <button type="submit">Sign-up</button>
+        </div>
+    </form>
+ </body>
+    <script>
+        function setDataToJson(fieldName){
+            let newJson = {}
+            let newArr = []
+            
+            console.log(newArr)
+            
+        }
+        function checkIfEmailIsMatch(){
+            const email = document.getElementById('email');
+            const emailConfirm = document.getElementById('confirmEmail');
+            // check if not empty
+            if(email.value !== '' && emailConfirm.value !== '') {
+                // check if password matches or not
+                if(email.value === emailConfirm.value) {
+                    document.getElementById('message-response').innerHTML = "Email matches!"
+                }
+                else {
+                    document.getElementById('message-response').innerHTML = "Email doest not match!"
+                }
+            } 
+            else {
+                document.getElementById('message-response').innerHTML = ""
+            }
+        }
+    </script>
+ </html>

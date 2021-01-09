@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('./assets/Allura\ -\ Desk.png');
+}
+h1 {
+    font-size: 32px;
+    color: red;
+}
+.main-content {
+    background-color: white;
+    display: flex;
+}
+.main-content > div {
+    width: 400px;
+    margin: 0 20px;
+}
