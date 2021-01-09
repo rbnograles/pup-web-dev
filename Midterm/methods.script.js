@@ -22,7 +22,7 @@ function checkIfEmailIsMatch(){
 
 // download the file generated as json
 function download(filename, text) {
-    var element = document.createElement('a');
+    let element = document.createElement('a');
     element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
     element.setAttribute('download', filename);
     element.style.display = 'none';
@@ -34,16 +34,16 @@ function download(filename, text) {
 // set data to JSON file
 function saveData() {
     //get radios
-    var radioSize = document.getElementsByName('shirtSize');
-    var shirtValue="";
-    for (var i = 0, length = radioSize.length; i < length; i++) {
+    let radioSize = document.getElementsByName('shirtSize');
+    let shirtValue="";
+    for (let i = 0, length = radioSize.length; i < length; i++) {
         if (radioSize[i].checked) {
-            var shirtValue = radioSize[i].value;
+            shirtValue = radioSize[i].value;
             break;
         }
     }
     if ((document.getElementById("email").value === document.getElementById("confirmEmail").value)) {
-        var input = {
+        let input = {
             "firstName" : document.getElementById("firstName").value,
             "lastName" : document.getElementById("lastName").value,
             "emailAddress" : document.getElementById("email").value,
