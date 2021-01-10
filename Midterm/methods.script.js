@@ -23,6 +23,8 @@ function checkIfEmailIsMatch(){
 // download the file generated as json
 function download(filename, text) {
     let element = document.createElement('a');
+    // character encoding to json format is not supported by the internet explorer version 9 - 11
+    // please choose another browser that has an ES6 support for javascript [all browser except IE will do]
     element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
     element.setAttribute('download', filename);
     element.style.display = 'none';
