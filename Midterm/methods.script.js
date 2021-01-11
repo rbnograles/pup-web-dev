@@ -23,14 +23,26 @@ function checkIfEmailIsMatch(){
 // download the file generated as json
 function download(filename, text) {
     let element = document.createElement('a');
-    // character encoding to json format is not supported by the internet explorer version 9 - 11
-    // please choose another browser that has an ES6 support for javascript [all browser except IE will do]
     element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
     element.setAttribute('download', filename);
     element.style.display = 'none';
     document.body.appendChild(element);
     element.click();
     document.body.removeChild(element);
+}
+
+function saveAs(fileName, file) {
+    // force download using js manipulation is not supported by IE thus resulting in creating a conditional 
+    // for the IE browser
+    // mmsSaveOrOpenBlob is a native support for opening blob file for IE
+    if (window.navigator && window.navigator.msSaveOrOpenBlob) {
+        var myBlob = new Blob([file], {type: 'application/json'});
+        window.navigator.msSaveOrOpenBlob(myBlob, fileName);
+    } 
+    else {
+        // for chrome and other browser that supports force download
+        download(fileName, file);
+    }
 }
 
 // set data to JSON file
@@ -54,7 +66,7 @@ function saveData() {
             "receiveEmail" : document.getElementById("receiveEmail").checked,
             "shirtSize" : shirtValue
         };
-        download("registration.json",JSON.stringify(input));
+        saveAs("registration.json", JSON.stringify(input));
     }
     else{
         alert("Email not the same");
