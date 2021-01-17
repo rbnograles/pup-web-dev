@@ -1,0 +1,520 @@
+* {
+    /* basic css clean */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --nav-bg-colorL: #33B5E5;
+    --body-bg-color: #eff1f3;
+    --active: #1C6EA4;
+    --light-bg-input: #d4e6f6;
+    --rejected-color: #ff1919;
+    --success-color: #4a934a;
+}
+
+::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+    border-radius: 4px;
+    background: transparent;
+    transition: all 0.3s ease;
+    transition: all .35s ease-in-out;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar:hover {
+    background: #c6c7ca;
+    transition: all .35s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #b4afaf;
+    border-radius: 4px;
+    transition: all .35s ease-in-out;
+}
+
+/* set body behavior */
+
+body {
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    /* setting fallback font styles */
+    position: relative;
+    background-color: var(--body-bg-color);
+    /* for IE */
+    background-color: #eff1f3;
+}
+
+mt
+
+/* modal */
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    border-radius: 10px;
+    background-color: #fefefe;
+    margin: 5% auto; /* 15% from the top and centered */
+    padding: 20px;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.fa-bars {
+    width: 10px;
+    height: 20px;
+    color: white;
+}
+
+.mt-2 {
+    margin-top: 20px !important;
+}
+
+.mb-2 {
+    margin-bottom: 20px;
+}
+
+.required {
+    color: red;
+    font-weight: 700;
+}
+
+.pos-rel {
+    position: relative;
+}
+
+.r-align {
+    text-align: right !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+.d-flex {
+    display: flex;
+}
+.d-none  {
+    display: none !important;
+}
+.d-flex-end {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: space-around;
+}
+
+.success {
+    color: white;
+    background-color: var(--success-color);
+    background-color: #4a934a;
+    padding: 1.5% 2%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.error {
+    color: white;
+    background-color: var(--rejected-color);
+    background-color: #ff1919;
+    padding: 1.5% 2%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+/* navbar */
+
+nav {
+    background-color: var(--nav-bg-colorL);
+    background-color: #33B5E5;
+    padding: .7% 1%;
+    display: flex;
+}
+
+nav img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.nav-text-header {
+    letter-spacing: .75px;
+}
+
+.nav-text-header h3 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500 !important;
+}
+
+.nav-text-header p {
+    color: white;
+    line-height: 17px;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+nav ul {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    padding-right: 20px;
+}
+
+nav ul li {
+    display: inline;
+    list-style-type: none;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white !important;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+nav ul li a.active {
+    background-color: var(--active);
+    background-color: #1C6EA4;
+}
+
+/* main body content */
+
+.page-body {
+    padding: 10px 5%;
+}
+
+form {
+    padding: 10px;
+}
+
+.card {
+    padding: 2%;
+    margin: 15px auto;
+    background: white;
+    border-radius: 10px;
+}
+
+.card-header {
+    position: relative;
+}
+
+.card.page-banner {
+    color: white;
+    background-color: var(--nav-bg-colorL);
+    background-color: #33B5E5;
+}
+
+.card-item-left {
+    display: flex;
+}
+
+.card-item-left img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.card-item-text-header h3 {
+    text-transform: uppercase;
+    font-weight: 500 !important;
+}
+
+.card-item-text-header p {
+    font-weight: 600;
+}
+
+.card-item-right {
+    position: absolute;
+    right: 10px;
+}
+
+.card-item-right p {
+    font-weight: 500;
+}
+
+.card-item-right p span {
+    color: var(--active);
+    color: #1C6EA4;
+}
+
+/* inputs */
+
+.input-group {
+    display: flex;
+    flex-grow: 1;
+}
+
+.input-err {
+    border: 2px solid var(--rejected-color) !important;
+    border: 2px solid #ff1919 !important;
+    background-color: #ee9999 !important;
+}
+
+.input-holder {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input-holder label {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.input-holder .input-field {
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    transition: all 0.25s ease;
+    padding: 10px 15px;
+    color: black;
+    background-color: var(--light-bg-input);
+    background-color: #d4e6f6;
+    border: 1px solid var(--nav-bg-colorL);
+    border: 1px solid #33B5E5;
+}
+
+/* buttons */
+
+.btn-group {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: flex-end;
+    padding: 1.5% 0;
+}
+
+.btn-canceled {
+    color: white;
+    background-color: var(--rejected-color);
+    background-color: #ff1919;
+    border: none;
+    padding: 10px 15px;
+    font-size: 13px;
+    font-style: inherit;
+    font-weight: 600;
+    border-radius: 5px;
+    outline: none !important;
+    margin: 0px 10px 5px 1px;
+}
+
+.btn-success {
+    color: white;
+    background-color: var(--success-color);
+    background-color: #4a934a;
+    border: none;
+    padding: 10px 15px;
+    font-size: 13px;
+    font-style: inherit;
+    font-weight: 600;
+    border-radius: 5px;
+    outline: none !important;
+    margin: 0px 10px 5px 1px;
+    cursor: pointer;
+}
+
+.delete-btn {
+    background-color: #fd4242;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* table */
+
+.table-container {
+    width: 100%;
+    overflow: scroll;
+}
+
+.table-input {
+    width: 100%;
+    outline: none;
+    transition: all 0.25s ease;
+    padding: 5px 5px;
+    border: 1px solid var(--nav-bg-colorL);
+    border: 1px solid #33B5E5;
+}
+
+.table-select {
+    padding: 5px 5px;
+    border: 1px solid var(--nav-bg-colorL);
+    border: 1px solid #33B5E5;
+    outline: none;
+    /* hold white bg for mobile view */
+    background-color: white;
+}
+
+table.blueTable {
+    border: none;
+    white-space: nowrap;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+table.blueTable td, table.blueTable th {
+    border: 1px solid var(--light-bg-input);
+    border: 1px solid #d4e6f6;
+    padding: 5px 2px;
+}
+
+table.blueTable tbody td {
+    font-size: 13px;
+    text-align: center;
+    border: 2px solid var(--light-bg-input);
+    border: 2px solid #d4e6f6;
+}
+
+table.blueTable tr:nth-child(even) {
+    background: #D0E4F5;
+}
+
+table.blueTable thead {
+    background: var(--active);
+    text-align: center;
+}
+
+table.blueTable thead th {
+    font-weight: 500;
+    padding: 10px;
+    font-size: 13px;
+    color: #FFFFFF;
+    /* for internet explorer */
+    background: #1C6EA4;
+}
+
+table.blueTable thead th:first-child {
+    border-left: none;
+}
+
+table.blueTable tfoot {
+    color: white;
+    background: #D0E4F5;
+}
+
+table.blueTable tfoot td {
+    font-size: 15px;
+}
+
+table.blueTable tfoot .links {
+    text-align: right;
+    margin: 5px 5px;
+}
+
+table.blueTable tfoot .links a {
+    display: inline-block;
+    background: #1C6EA4;
+    color: #FFFFFF;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* alerts and displays */
+
+/* footer and bottom component styles */
+
+footer {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 1.5%;
+    text-align: center;
+    font-size: 15px;
+}
+
+/* responsive design */
+
+/* 600px and below for tablets and phones */
+
+@media only screen and (max-width: 600px) {
+    nav {
+        padding: 3%;
+    }
+    .nav-pull-right ul {
+        display: none;
+    }
+    .nav-pull-right {
+        position: absolute;
+        right: 0;
+        padding: 10px;
+    }
+    .card.page-banner {
+        padding: 3.5%;
+    }
+    .card.page-banner h1 {
+        font-size: 25px;
+    }
+    .page-body {
+        padding: 10px 5%;
+    }
+    /* appends for internet explorer */
+    .ie11-append-dis {
+        display: inherit;
+    }
+    .ie11-append-pos {
+        position: inherit;
+        padding: 0 20px !important;
+    }
+    .card-header.d-flex {
+        display: unset;
+    }
+    .card-item-right {
+        position: unset;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 5px;
+    }
+    .card-item-right p {
+        font-size: 12px;
+    }
+    form {
+        padding: 2%;
+    }
+    .btn-group {
+        padding: 3% 0;
+    }
+    footer {
+        padding: 2%;
+    }
+}
